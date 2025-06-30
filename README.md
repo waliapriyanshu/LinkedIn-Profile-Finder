@@ -12,10 +12,10 @@ Challenge link: [Sourcing Agent Challenge](https://www.notion.so/synapseint/Syna
 
 ## 💡 Features
 
-- Extracts job-specific keywords using NLP.
+- Extracts job-specific keywords using basic NLP logic.
 - Performs automated Google search using SerpAPI to find public LinkedIn profiles.
 - Uses Gemini (Google GenAI) to contextually evaluate and score profile matches.
-- Outputs top-ranked LinkedIn profiles and stores results in a local SQLite database.
+- Stores results in a local SQLite database.
 
 ---
 
@@ -60,11 +60,11 @@ python linkedin_profile_finder.py
 ## 🛠 Tech Stack
 
 - **Python**
-- **SerpAPI** – Google search results
-- **Google GenAI (Gemini)** – Profile scoring
-- **SQLite** – Storing search results
-- **fuzzywuzzy + Levenshtein** – Keyword-based matching
-- **BeautifulSoup** – Snippet cleaning
+- **SerpAPI** – For Google search results
+- **Google GenAI (Gemini)** – For profile scoring
+- **SQLite** – For storing results
+- **Requests** – For HTTP requests
+- **concurrent.futures** – For parallel processing
 
 ---
 
@@ -78,7 +78,7 @@ python linkedin_profile_finder.py
 
 ## 🚀 Future Improvements
 
-- Advanced contextual matching using embeddings
-- Resume matching and parsing integration
-- Rate-limit mitigation strategies (API pool, caching)
-- UI for recruiter input/output visualization
+- Improve contextual matching using embeddings
+- Integrate resume parsing and ATS scoring
+- Add caching and rate-limit handling
+- Build a UI for recruiter-friendly interaction
